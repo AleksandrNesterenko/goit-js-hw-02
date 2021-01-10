@@ -5,7 +5,8 @@
 // добавляет в конец строки троеточие '...', после чего возвращает укороченную версию.
 
 const formatString = function(string) {
-  // твой код
+  const longMesseges = string.length;
+  return longMesseges <= 40 ? string : '...'; 
 };
 
 /*
