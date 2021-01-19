@@ -9,45 +9,26 @@
 // если массив не пустой, необходимо посчитать сумму всех элементов массива и записать ее в переменную total.
 // Используй цикл for или for...of.После чего в консоль выведи строку 'Общая сумма чисел равна [сумма]'.
 
-// let input;
-// const numbers = [];
-// let total = 0;
-
-// do {
-//   input = prompt('Введите Ваши цифры');
-//   if (input === null) {
-//     break;
-//   }
-
-//   input = Number(input);
-//   total = total + input;
-// } while (true);
-
-// console.log(`Общая сумма чисел равна ${total}`);
-
 let input;
 const numbers = [];
-let total = 0; 
-
-
-while (input !== null) {
-
-    input = prompt('ввидите цифру');
-
-    if (Number.isNaN(Number(input))) {
-        alert('Было введено не число, попробуйте еще раз');
-        continue;
-    } 
-
-    if (input === null) {
-        console.log(`Общая сумма чисел равна ${total}`);
-        continue;
-    } 
-    numbers.push(Number(input));
-    console.log(numbers);
-
-    for(const number of numbers) {
-        total = total + number;
-        }
-    
+let total = 0;
+while (true) {
+  input = prompt("Введите любое число:");
+  if (input === null) {
+    alert("Отменено пользователем!");
+    break;
+  }
+  input = Number(input);
+  if (Number.isNaN(input)) {
+    alert("Было введено не число, попробуйте еще раз");
+    continue;
+  } else {
+    numbers.push(input);
+  }
 }
+
+for (let i = 0; i < numbers.length; i++) {
+  total = total + numbers[i];
+}
+console.log(numbers);
+alert(`Общая сумма чисел равна ${total}`);
