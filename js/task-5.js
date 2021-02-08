@@ -7,10 +7,10 @@
 const checkForSpam = function (message) {
     
     const checkMesseges = message.toLowerCase();
-    console.log(checkMesseges.includes('spam') || checkMesseges.includes('sale'));
-
-    return checkMesseges;
-    
+    if (checkMesseges.includes('spam') || checkMesseges.includes('sale')) {
+        return true;
+    }
+    else {return false;}
 };
 
 /*
